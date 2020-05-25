@@ -2,6 +2,8 @@
 
 认识复杂度，对数器，二分与异或运算
 
+[复杂度](https://github.com/sanzhixiong19860117/dataStructure/tree/master/dya01)
+
 链表结构，栈，队列，递归行为，哈希表和有序表
 
 归并排序与随机快排
