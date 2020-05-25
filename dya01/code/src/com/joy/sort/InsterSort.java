@@ -23,13 +23,16 @@ public class InsterSort {
 
         int tmp = 0;
 
-        //第一步循环操作最外层的数据
-        for (int i = 1; i < arr.length ; i++) {
-            //大的往后插入
+        //从第一张开始判断1-n
+        for (int i = 1; i < arr.length; i++) {
+            //斗地主的牌型比较
             if(arr[i]<arr[i-1]){
-                tmp = arr[i];
-                for (int j = i; j > 0; j--) {
+                tmp = arr[i];//记录当前的数据
+                //这个操作是从小的这张排开始1移动到0的位置
+                for (int j = i; j >0 ; j--) {
+                    //如果前面的数据大于当前的数据就可以交换，如果不是的话就赋值
                     if(j>0 && arr[j-1]>tmp){
+                        //交换两个数据
                         arr[j] = arr[j-1];
                     }
                     else{
