@@ -13,6 +13,7 @@ public class ErFen {
         int min = 10;
         int max = 20;
         int[] arr = Glob.createArray(min,max);
+        Glob.systemSort(arr);
         System.out.println(Arrays.toString(arr));
         if(erfen(arr,10)){
             System.out.println("找到了");
