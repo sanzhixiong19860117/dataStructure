@@ -6,16 +6,31 @@ package com.joy.sort;
  */
 public class MaoPaoDemo {
     public static void main(String[] args) {
-        int[] arr = {3,2,4,5,99,7,9};
-        maopao(arr);
-        for (int i = 0; i <arr.length ; i++) {
-            System.out.println(arr[i]);
+        int min = 10;
+        int max = 20;
+        int time = 500000;
+        int[] arr = {};
+        int[] arr1 = {};
+        boolean isRight = true;
+        for (int i = 0; i < time ; i++) {
+            arr = Glob.createArray(min,max);
+            arr1 = Glob.cpArray(arr);
+            maopao(arr);
+            Glob.systemSort(arr1);
+            if(!Glob.equer(arr,arr1)){
+                isRight = false;
+            }
+        }
+        if(isRight){
+            System.out.println("is nice");
+        }else{
+            System.out.println("操作错误");
         }
     }
 
     //冒泡排序函数
     private static void maopao(int[] arr){
-        if(null == arr || arr.length<2){
+        if(null == arr){
             System.out.println("数据有错误");
             return;
         }
@@ -23,9 +38,6 @@ public class MaoPaoDemo {
             for (int j = i+1; j <arr.length ; j++) {
                 //交换数据
                 if(arr[i]>arr[j]){
-//                    int tmp = arr[i];
-//                    arr[i] = arr[j];
-//                    arr[j] = tmp;
                     arr[i] = arr[i]^arr[j];
                     arr[j] = arr[i]^arr[j];
                     arr[i] = arr[i]^arr[j];

@@ -1,6 +1,7 @@
 package com.joy.sort;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
 
 /**
  * @author joy
@@ -9,10 +10,28 @@ import java.lang.reflect.Array;
  */
 public class InsterSort {
     public static void main(String[] args) {
-        int[] arr = {1,100,3,2,88,66};
-        insterSort(arr);
-        for (int i = 0; i < arr.length ; i++) {
-            System.out.println(arr[i]);
+        int min = 10;
+        int max = 10;
+        int time = 500000;
+        int[] arr = {};
+        int[] arr1 = {};
+        boolean isRight = true;
+        for (int i = 0; i < time ; i++) {
+            arr = Glob.createArray(max,min);
+            arr1 = Glob.cpArray(arr);
+            insterSort(arr);
+            Glob.systemSort(arr1);
+            if(!Glob.equer(arr,arr1)){
+                //操作
+                isRight = false;
+                break;
+            }
+        }
+        if(isRight){
+            System.out.println("is nice");
+            System.out.println(Arrays.toString(arr));
+        }else{
+            System.out.println("出现错误了");
         }
     }
 
@@ -20,26 +39,12 @@ public class InsterSort {
         if(null == arr || arr.length<2){
             return;
         }
-
         int tmp = 0;
-
         //从第一张开始判断1-n
         for (int i = 1; i < arr.length; i++) {
             //斗地主的牌型比较
-            if(arr[i]<arr[i-1]){
-                tmp = arr[i];//记录当前的数据
-                //这个操作是从小的这张排开始1移动到0的位置
-                for (int j = i; j >0 ; j--) {
-                    //如果前面的数据大于当前的数据就可以交换，如果不是的话就赋值
-                    if(j>0 && arr[j-1]>tmp){
-                        //交换两个数据
-                        arr[j] = arr[j-1];
-                    }
-                    else{
-                        arr[j] = tmp;
-                        break;
-                    }
-                }
+            for (int j = i-1; j >=0&&arr[j]>arr[j+1] ; j--) {
+                Glob.swop(arr,j,j+1);
             }
         }
     }
