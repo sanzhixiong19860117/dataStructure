@@ -4,7 +4,7 @@
 
 [复杂度](https://github.com/sanzhixiong19860117/dataStructure/tree/master/dya01)
 
-对数器
+[对数器](https://github.com/sanzhixiong19860117/dataStructure/tree/master/Logarithm)
 
 链表结构，栈，队列，递归行为，哈希表和有序表
 
