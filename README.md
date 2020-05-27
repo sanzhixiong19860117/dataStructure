@@ -6,6 +6,10 @@
 
 [对数器](https://github.com/sanzhixiong19860117/dataStructure/tree/master/Logarithm)
 
+二分
+
+异或运算
+
 链表结构，栈，队列，递归行为，哈希表和有序表
 
 归并排序与随机快排
