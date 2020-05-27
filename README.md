@@ -8,7 +8,7 @@
 
 [二分](https://github.com/sanzhixiong19860117/dataStructure/tree/master/erfen)
 
-异或运算
+[异或运算](https://github.com/sanzhixiong19860117/dataStructure/tree/master/xor)
 
 链表结构，栈，队列，递归行为，哈希表和有序表
 
