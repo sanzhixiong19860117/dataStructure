@@ -6,7 +6,7 @@
 
 [对数器](https://github.com/sanzhixiong19860117/dataStructure/tree/master/Logarithm)
 
-二分
+[二分](https://github.com/sanzhixiong19860117/dataStructure/tree/master/erfen)
 
 异或运算
 
